@@ -30,7 +30,7 @@ add_library(data_provider src/data_provider.cc)
 target_include_directories(data_provider PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Main executable
-add_executable(extrapolation_solver task2.cpp)
+add_executable(extrapolation_solver src/main.cc)
 target_link_libraries(extrapolation_solver PRIVATE extrapolation complex_num data_provider)
 
 # Tests
