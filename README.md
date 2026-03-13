@@ -1,31 +1,66 @@
-Overview
---------
+# Extrapolation Methods Solver
 
-    Polynimial and Rational extrapolations
+## Overview
 
-Usage:
-------
+Modernized C++ implementation of Polynomial and Rational extrapolation methods.
 
-1. `g++ -O3 task2.cpp -o a`
+## Mathematical Methods
 
-License
--------
-    Copyright (C) 2013  Alexander Lapin
+### Polynomial Extrapolation
+Uses the Neville's algorithm to compute the value of the unique polynomial of degree $n-1$ that passes through $n$ given points.
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+### Rational Extrapolation
+Uses the Bulirsch-Stoer algorithm (a variation of the Thiele's interpolation formula) to extrapolate values using rational functions. This is often more robust than polynomial extrapolation for functions with singularities.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+## Build Requirements
+- CMake (>= 3.14)
+- C++17 compliant compiler (e.g., GCC 9+, Clang 10+)
+- Google Test (automatically downloaded via CMake)
 
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-	
-Contacts:
----------
-Alexander Lapin, lapinra@gmail.com
+## Building the Project
 
+```bash
+mkdir build
+cd build
+cmake ..
+make
+```
+
+## Usage
+
+Run the solver with default parameters (reads `input.txt`, writes `output.txt`, imaginary part `0.1`):
+```bash
+./extrapolation_solver
+```
+
+Specify custom parameters:
+```bash
+./extrapolation_solver [input_file] [output_file] [imaginary_part]
+```
+
+Example:
+```bash
+./extrapolation_solver my_data.txt results.csv 0.05
+```
+
+## Running Tests
+
+After building, you can run the unit tests:
+```bash
+cd build
+ctest
+```
+Or run the specific test binary:
+```bash
+./complex_num_test
+```
+
+## Regression Testing
+A script is provided to ensure numerical parity with the original implementation:
+```bash
+bash regression_test.sh
+```
+
+## License
+Copyright (C) 2013-2026 Alexander Lapin
+Distributed under the GNU General Public License, version 3 or later.
