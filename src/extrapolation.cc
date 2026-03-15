@@ -1,7 +1,7 @@
 // Copyright 2026 Alexander Lapin
 // Implementation of polynomial and rational extrapolation algorithms.
 
-#include "include/extrapolation.h"
+#include "extrapolation.h"
 
 #include <algorithm>
 #include <vector>

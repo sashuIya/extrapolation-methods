@@ -18,8 +18,7 @@ Rational functions often provide better approximations than polynomials, especia
 $$R_{i, \dots, i+k}(z) = R_{i+1, \dots, i+k}(z) + \frac{R_{i+1, \dots, i+k}(z) - R_{i, \dots, i+k-1}(z)}{\left( \frac{z - x_i}{z - x_{i+k}} \right) \left[ 1 - \frac{R_{i+1, \dots, i+k}(z) - R_{i, \dots, i+k-1}(z)}{R_{i+1, \dots, i+k}(z) - R_{i+1, \dots, i+k-1}(z)} \right] - 1}$$
 
 ## Project Structure
-- `include/`: Header files (`.h`).
-- `src/`: Implementation files (`.cc`) and the main entry point (`main.cc`).
+- `src/`: Implementation files (`.cc`) and header files (`.h`).
 - `tests/`: Unit tests using Google Test.
 - `input.txt`: Default input data ($(x, f(x))$ pairs).
 

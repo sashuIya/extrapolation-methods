@@ -16,18 +16,14 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+# Include src directory
+include_directories(src)
 
 # Libraries
 add_library(complex_num src/complex_num.cc)
-target_include_directories(complex_num PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-
 add_library(extrapolation src/extrapolation.cc)
-target_include_directories(extrapolation PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(extrapolation PRIVATE complex_num)
-
 add_library(data_provider src/data_provider.cc)
-target_include_directories(data_provider PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Main executable
 add_executable(extrapolation_solver src/main.cc)

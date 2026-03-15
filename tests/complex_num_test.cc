@@ -1,4 +1,4 @@
-#include "include/complex_num.h"
+#include "complex_num.h"
 
 #include <gtest/gtest.h>
 

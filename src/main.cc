@@ -4,9 +4,9 @@
 #include <string>
 #include <vector>
 
-#include "include/complex_num.h"
-#include "include/data_provider.h"
-#include "include/extrapolation.h"
+#include "complex_num.h"
+#include "data_provider.h"
+#include "extrapolation.h"
 
 using extrapolation::ComplexNum;
 using extrapolation::DataProvider;

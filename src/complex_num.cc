@@ -1,7 +1,7 @@
 // Copyright 2026 Alexander Lapin
 // Implementation of the ComplexNum class.
 
-#include "include/complex_num.h"
+#include "complex_num.h"
 
 #include <cmath>
 
